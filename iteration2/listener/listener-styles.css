@@ -8,10 +8,19 @@ body {
 
 h1 { color:gold; }
 
+input[type="checkbox"] {
+    width: 2rem;
+    height: 2rem;
+}
+label[for*="placeholder"]{ 
+    color: #7cdfad; 
+    font-size: 2rem;
+}
 
 .grid-container{
     display: grid;
     background-color: #3b1d57;
+    border-radius: 1.25rem;
     gap: 0.1rem;
 }
 
@@ -20,7 +29,6 @@ h1 { color:gold; }
     grid-template-rows: repeat(2, 1fr);
     padding: 0.5rem 0.25rem;
     justify-content: center;
-    border: 2px solid red;
     place-items: center;
 }
 
@@ -38,7 +46,6 @@ h1 { color:gold; }
     display: grid;
     min-height: 60vh;
     margin-top: -1.5rem;
-    border: 2px solid gold;
     grid-template-columns: repeat(3,1fr);
 }
 
@@ -56,6 +63,17 @@ h1 { color:gold; }
     text-decoration: none;
 }
 
+.flexbox-column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-self: center;
+}
+
 .button{
     font-size: 1.25rem;
+    border-radius: 0.5rem;
 }
+
+
