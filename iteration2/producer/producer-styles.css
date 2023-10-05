@@ -25,3 +25,36 @@ button{
     height: 25rem;
 }
 
+.grid-container{
+    display: grid;
+    gap: 0.1rem;
+}
+
+.flexbox-item{
+    display: inherit;
+    flex-grow: 1;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.flexbox-column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-self: center;
+}
+
+
+input[type="radio"] {
+    width: 2rem;
+    height: 2rem;
+}
+input[type="checkbox"] {
+    width: 2rem;
+    height: 2rem;
+}
+label[for*="placeholder"]{ 
+    color: #7cdfad; 
+    font-size: 2rem;
+}
