@@ -1,0 +1,21 @@
+body {
+    background-color: navy;
+    color: red;
+}
+
+/* #category {
+    border: solid;
+} */
+
+#main {
+    border: solid;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: auto;
+    height: 12rem
+}
+
+/* #complete {
+    border: solid;
+} */
