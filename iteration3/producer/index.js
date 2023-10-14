@@ -48,13 +48,25 @@ function alertList(category) {
 };
 
 
+function validSelections(selections) {
+    let validPlaylist = selections.playlist !== "";
+    let validEvents = selections.events.length !== 0;
+    let validDJ = selections.dj !== "";
+    let validTimeslot = selections.timeslot !== "";
+
+    return validPlaylist && validEvents && validDJ && validTimeslot;
+};
+
 
 function submitPlaylist(event) {
     let playlist = alertValue('playlist');
     selections.playlist = playlist;
     console.log(selections);
-
     event.preventDefault();
+
+    if (validSelections(selections)) {
+        submitSelections();                
+    }
 }
 
 
@@ -62,8 +74,11 @@ function submitEvents(event) {
     let events = alertList('event');
     selections.events = events;
     console.log(selections);
-
     event.preventDefault();
+
+    if (validSelections(selections)) {
+        submitSelections();                
+    }
 }
 
 
@@ -71,8 +86,12 @@ function submitDJ(event) {
     let dj = alertValue('DJ');
     selections.dj = dj;
     console.log(selections);
-
     event.preventDefault();
+
+    if (validSelections(selections)) {
+        submitSelections();                
+    }
+
 }
 
 
@@ -80,9 +99,18 @@ function submitTimeslot(event) {
     let timeslot = alertValue('timeslot');
     selections.timeslot = timeslot;
     console.log(selections);
-
     event.preventDefault();
+
+    if (validSelections(selections)) {
+        submitSelections();                
+    }
 }
+
+
+function submitSelections() {
+    alert(`All choices made! Submitting selections`);
+    // send selections to DB
+};
 
 
 
