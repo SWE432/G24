@@ -1,0 +1,89 @@
+<!-- Author: Nicholas Terrazas -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Producer Station</title>
+    <link rel="stylesheet" href="producer-styles.css">
+
+</head>
+<body style="text-align: center;">
+    
+    <h1>Producer Station</h1>
+
+    <div id="categories">
+        <a href="producer-playlist.html" class="category-selection" target="_blank">
+            <button class="button" onclick="alert('Choosing Playlists')">Choose Playlist</button>
+        </a>
+        <a href="producer-events.html" class="category-selection" target="_blank">
+            <button class="button" onclick="alert('Choosing Events')">Choose Events</button>
+        </a>
+        <a href="producer-dj.html" class="category-selection" target="_blank">
+            <button class="button" onclick="alert('Choosing DJ')">Choose DJ</button>
+        </a>
+        <a href="producer-timeslot.html" class="category-selection" target="_blank">
+            <button class="button" onclick="alert('Choosing Timeslot')">Choose Timeslot</button>
+        </a>
+    </div>
+
+    <h1 style="margin-top: 2rem; text-align: left;">Playlist Selection</h1>
+    <div class="grid-container" id="main-content" >
+        <form id="playlist-form" action="#" method="post" style="padding-left:0.25rem">
+        
+            <div class="flexbox-column">        
+                <li class="flexbox-item">
+                    <input type="radio" id="playlist-1" name="playlist" value="playlist-1">
+                    <label for="playlist-1">Playlist 1</label>
+                </li>
+                <li class="flexbox-item">
+                    <input type="radio" id="playlist-2" name="playlist" value="playlist-2">
+                    <label for="playlist-2">Playlist 2</label>
+                </li>
+                <li class="flexbox-item">
+                    <input type="radio" id="playlist-3" name="playlist" value="playlist-3">
+                    <label for="playlist-3">Playlist 3</label>
+                </li>
+                <li class="flexbox-item">
+                    <input type="radio" id="playlist-4" name="playlist" value="playlist-4">
+                    <label for="playlist-4">Playlist 4</label>
+                </li>
+                <li class="flexbox-item">
+                    <input type="radio" id="playlist-5" name="playlist" value="playlist-5">
+                    <label for="playlist-5">Playlist 5</label>
+                </li>
+            </div>
+        
+            <div class="flexbox-column" style="grid-column-start: 3;">
+                <li class="flexbox-item">
+                    <input type="radio" id="playlist-6" name="playlist" value="playlist-6">
+                    <label for="playlist-6">Playlist 6</label>
+                </li>
+                <li class="flexbox-item">
+                    <input type="radio" id="playlist-7" name="playlist" value="playlist-7">
+                    <label for="playlist-7">Playlist 7</label>
+                </li>
+                <li class="flexbox-item">
+                    <input type="radio" id="playlist-8" name="playlist" value="playlist-8">
+                    <label for="playlist-8">Playlist 8</label>
+                </li>
+                <li class="flexbox-item">
+                    <input type="radio" id="playlist-9" name="playlist" value="playlist-9">
+                    <label for="playlist-9">Playlist 9</label>
+                </li>
+                <li class="flexbox-item">
+                    <input type="radio" id="playlist-0" name="playlist" value="playlist-0">
+                    <label for="playlist-0">Playlist 0</label>
+                </li>
+            </div>
+
+            <div id="submission">
+                <button class="button" type="reset">Cancel</button>
+                <button id="submit-selection" type="submit" class="button">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
