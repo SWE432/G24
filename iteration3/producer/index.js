@@ -20,6 +20,8 @@ function alertValue(category) {
     else {
         alert(`No ${category} selected`)
     }
+
+    return selectedValue;
 };
 
 
@@ -41,30 +43,44 @@ function alertList(category) {
     } else {
         alert(`No ${category}s selected!`);
     }
+
+    return selectedValues; 
 };
 
 
 
 function submitPlaylist(event) {
-    alertValue('playlist');
+    let playlist = alertValue('playlist');
+    selections.playlist = playlist;
+    console.log(selections);
+
     event.preventDefault();
 }
 
 
 function submitEvents(event) {
-    alertList('event');
+    let events = alertList('event');
+    selections.events = events;
+    console.log(selections);
+
     event.preventDefault();
 }
 
 
 function submitDJ(event) {
-    alertValue('DJ');
+    let dj = alertValue('DJ');
+    selections.dj = dj;
+    console.log(selections);
+
     event.preventDefault();
 }
 
 
 function submitTimeslot(event) {
-    alertValue('timeslot');
+    let timeslot = alertValue('timeslot');
+    selections.timeslot = timeslot;
+    console.log(selections);
+
     event.preventDefault();
 }
 
@@ -74,6 +90,13 @@ const playlistForm = document.getElementById("playlist-form");
 const eventsForm = document.getElementById("events-form");
 const djForm = document.getElementById("dj-form");
 const timeslotForm = document.getElementById("timeslot-form");
+
+const selections = {
+    playlist: '',
+    events: [],
+    dj: '',
+    timeslot: '',
+};
 
 playlistForm.addEventListener("submit", submitPlaylist);
 eventsForm.addEventListener("submit", submitEvents);
