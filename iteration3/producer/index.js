@@ -75,7 +75,7 @@ const eventsForm = document.getElementById("events-form");
 const djForm = document.getElementById("dj-form");
 const timeslotForm = document.getElementById("timeslot-form");
 
-playlistForm && playlistForm.addEventListener("submit", submitPlaylist);
-eventsForm && eventsForm.addEventListener("submit", submitEvents);
-djForm && djForm.addEventListener("submit", submitDJ);
-timeslotForm && timeslotForm.addEventListener("submit", submitTimeslot);
+playlistForm.addEventListener("submit", submitPlaylist);
+eventsForm.addEventListener("submit", submitEvents);
+djForm.addEventListener("submit", submitDJ);
+timeslotForm.addEventListener("submit", submitTimeslot);
