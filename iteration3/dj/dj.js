@@ -1,3 +1,5 @@
+//djplaylists.html is no longer needed due to js.
+//everything is on main.
 
 //prelim setups
 //variables
