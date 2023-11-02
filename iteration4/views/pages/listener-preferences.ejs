@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header', {variant: 'compact'}); %>
+</header>
+
+<main>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="jumbotron">
+      <h1>Listener Preferences</h1>
+    </div>
+    <div class="jumbotron">
+          <% categories.forEach((genre) => { %>
+              <li>
+                  <input type="checkbox">
+                  <label><%= genre.name %></label>
+              </li>
+          <% }); %>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
