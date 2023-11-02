@@ -1,0 +1,245 @@
+<!-- Author: Nicholas Terrazas -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Producer Station</title>
+    <link rel="stylesheet" href="producer-styles.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    
+    <h1>Producer Station</h1>
+
+    <div id="categories">
+        <a href="#" class="category-selection">
+            <button class="button" onclick="showSection('playlist-section')">Choose Playlists</button>
+        </a>
+        <a href="#" class="category-selection">
+            <button class="button" onclick="showSection('events-section')">Choose Events</button>
+        </a>
+        <a href="#" class="category-selection">
+            <button class="button" onclick="showSection('dj-section')">Choose DJ</button>
+        </a>
+        <a href="#" class="category-selection">
+            <button class="button" onclick="showSection('timeslot-section')">Choose Timeslot</button>
+        </a>
+    </div>
+
+    <div id="playlist-section" class="hidden">
+        <h1 style="margin-top: 2rem; text-align: left;">Playlist Selection</h1>
+        <div class="grid-container" id="main-content" >
+            <form id="playlist-form" action="#" method="post" style="padding-left:0.25rem">
+            
+                <div class="flexbox-column">        
+                    <li class="flexbox-item">
+                        <input type="radio" id="playlist-1" name="playlist" value="playlist-1">
+                        <label for="playlist-1">Playlist 1</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="playlist-2" name="playlist" value="playlist-2">
+                        <label for="playlist-2">Playlist 2</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="playlist-3" name="playlist" value="playlist-3">
+                        <label for="playlist-3">Playlist 3</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="playlist-4" name="playlist" value="playlist-4">
+                        <label for="playlist-4">Playlist 4</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="playlist-5" name="playlist" value="playlist-5">
+                        <label for="playlist-5">Playlist 5</label>
+                    </li>
+                </div>
+            
+                <div class="flexbox-column" style="grid-column-start: 3;">
+                    <li class="flexbox-item">
+                        <input type="radio" id="playlist-6" name="playlist" value="playlist-6">
+                        <label for="playlist-6">Playlist 6</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="playlist-7" name="playlist" value="playlist-7">
+                        <label for="playlist-7">Playlist 7</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="playlist-8" name="playlist" value="playlist-8">
+                        <label for="playlist-8">Playlist 8</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="playlist-9" name="playlist" value="playlist-9">
+                        <label for="playlist-9">Playlist 9</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="playlist-0" name="playlist" value="playlist-0">
+                        <label for="playlist-0">Playlist 0</label>
+                    </li>
+                </div>
+    
+                <div id="submission">
+                    <button class="button" type="reset">Cancel</button>
+                    <button id="submit-selection" type="submit" class="button">Submit</button>
+                </div>
+    
+            </form>
+        </div>
+    </div>
+
+    <div id="events-section" class="hidden">
+        <h1 style="margin-top: 2rem; text-align: left;">Event Selection</h1>
+        <div class="grid-container" id="main-content" >
+            <form id="events-form" action="#" method="post" style="padding-left: 0.25rem;">
+                
+                <div class="flexbox-column">
+                    <li class="flexbox-item">
+                        <input type="checkbox" id="event-1" name="event" value="Spooky SZN">
+                        <label for="event-1">Spooky SZN</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="checkbox" id="event-2" name="event" value="Merry Jingles">
+                        <label for="event-2">Merry Jingles</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="checkbox" id="event-3" name="event" value="Freaky Friday">
+                        <label for="event-3">Freaky Friday</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="checkbox" id="event-4" name="event" value="Silent Sunday">
+                        <label for="event-4">Silent Sunday</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="checkbox" id="event-5" name="event" value="Fall Funk-Fest">
+                        <label for="event-5">Fall Funk-Fest</label>
+                    </li>
+                </div>
+    
+                <div id="submission">
+                    <button class="button" type="reset">Cancel</button>
+                    <button id="submit-selection" type="submit" class="button">Submit</button>
+                </div>
+    
+            </form>
+        </div>
+    </div>
+
+    <div id="dj-section" class="hidden">
+        <h1 style="margin-top: 2rem; text-align: left;">DJ Selection</h1>
+        <div class="grid-container" id="main-content" >
+            <form id="dj-form" action="#" method="post" style="padding-left: 0.25rem;">
+    
+                <div class="flexbox-column">
+                    <li class="flexbox-item">
+                        <input type="radio" id="dj-1" name="DJ" value="DJ TuringUp">
+                        <label for="dj-1">DJ TuringUp</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="dj-2" name="DJ" value="DJ Jazzman">
+                        <label for="dj-2">DJ Jazzman</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="dj-3" name="DJ" value="DJ Tarzzzan">
+                        <label for="dj-3">DJ Tarzzzan</label>
+                    </li>
+                </div>
+                <div class="flexbox-column" style="grid-column-start: 3;">
+                    <li class="flexbox-item">
+                        <input type="radio" id="dj-4" name="DJ" value="Placeholder 6">
+                        <label for="dj-4">Placeholder 6</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="dj-5" name="DJ" value="Placeholder 7">
+                        <label for="dj-5">Placeholder 7</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="dj-6" name="DJ" value="Placeholder 8">
+                        <label for="dj-6">Placeholder 8</label>
+                    </li>
+                </div>
+    
+                <div id="submission">
+                    <button class="button" type="reset">Cancel</button>
+                    <button id="submit-selection" type="submit" class="button">Submit</button>
+                </div>
+    
+            </form>
+        </div>
+    </div>
+
+    <div id="timeslot-section" class="hidden">
+        <h1 style="margin-top: 2rem; text-align: left;">Timeslot Selection</h1>
+        <div class="grid-container" id="main-content" >
+            <form id="timeslot-form" action="#" method="post" style="padding-left: 0.25rem;">
+                
+                <div class="flexbox-column">
+                    <li class="flexbox-item">
+                        <input type="radio" id="timeslot-1" name="timeslot" value="12:00 PM - 01:00 PM">
+                        <label for="timeslot-1">12:00 PM - 01:00 PM</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="timeslot-2" name="timeslot" value="01:00 PM - 02:00 PM">
+                        <label for="timeslot-2">01:00 PM - 02:00 PM</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="timeslot-3" name="timeslot" value="02:00 PM - 03:00 PM">
+                        <label for="timeslot-3">02:00 PM - 03:00 PM</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="timeslot-4" name="timeslot" value="03:00 PM - 04:00 PM">
+                        <label for="timeslot-4">03:00 PM - 04:00 PM</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="timeslot-5" name="timeslot" value="04:00 PM - 05:00 PM">
+                        <label for="timeslot-5">04:00 PM - 05:00 PM</label>
+                    </li>
+                </div>
+
+                <div class="flexbox-column" style="grid-column-start: 3;">
+                    <li class="flexbox-item">
+                        <input type="radio" id="timeslot-6" name="timeslot" value="05:00 PM - 06:00 PM">
+                        <label for="timeslot-6">05:00 PM - 06:00 PM</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="timeslot-7" name="timeslot" value="06:00 PM - 07:00 PM">
+                        <label for="timeslot-7">06:00 PM - 07:00 PM</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="timeslot-8" name="timeslot" value="07:00 PM - 08:00 PM">
+                        <label for="timeslot-8">07:00 PM - 08:00 PM</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="timeslot-9" name="timeslot" value="08:00 PM - 09:00 PM">
+                        <label for="timeslot-9">08:00 PM - 09:00 PM</label>
+                    </li>
+                    <li class="flexbox-item">
+                        <input type="radio" id="timeslot-0" name="timeslot" value="09:00 PM - 10:00 PM">
+                        <label for="timeslot-0">09:00 PM - 10:00 PM</label>
+                    </li>
+                </div>
+
+                <div id="submission">
+                    <button class="button" type="reset">Cancel</button>
+                    <button id="submit-selection" type="submit" class="button">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll(".hidden");
+            sections.forEach(section => section.style.display = "none");
+            const section = document.getElementById(sectionId);
+            section.style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

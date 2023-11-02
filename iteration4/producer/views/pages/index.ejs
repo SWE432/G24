@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<main>
+    <h1>Producer Station</h1>
+
+    <h2>Playlists</h2>
+    <ul>
+      <% playlists.forEach(function(playlist) { %>
+        <li>
+          <strong><%= playlist.name %></strong>
+          for all your <%= playlist.genre %> needs!
+        </li>
+      <% }); %>
+    </ul>
+
+    <h2>Events</h2>
+    <ul>
+      <% events.forEach(function(event) { %>
+        <li>
+          <strong><%= event.name %></strong>:
+          <%= event.description %>
+        </li>
+      <% }); %>
+    </ul>
+
+    <h2>DJs</h2>
+    <ul>
+      <% djs.forEach(function(dj) { %>
+        <li>
+          <strong><%= dj.name %></strong>
+        </li>
+      <% }); %>
+    </ul>
+
+    <h2>Timeslots</h2>
+    <ul>
+      <% timeslots.forEach(function(timeslot) { %>
+        <li>
+          <strong><%= timeslot.time %></strong>
+        </li>
+      <% }); %>
+    </ul>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
