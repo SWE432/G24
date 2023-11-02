@@ -1,3 +1,5 @@
+//Exact replica of iteration 3 but implemented with node and ejs.
+//to do: make updates and improve functionality, ie add and remove actually doing something...
 //set ups
 var express = require('express');
 var app = express();
