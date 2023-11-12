@@ -1,0 +1,22 @@
+<div id="playlist-section" class="hidden">
+    <h1 style="margin-top: 2rem; text-align: left;">Playlist Selection</h1>
+    <div class="grid-container" id="main-content" >
+        <form id="playlist-form" action="#" method="post" style="padding-left:0.25rem">
+        
+            <div class="flexbox-column">        
+                <% for (let i = 0; i < playlists.length; i++) { %>
+                    <li class="flexbox-item">
+                        <input type="radio" id="playlist-<%= i %>" name="playlist" value="<%= playlists[i].name %>">
+                        <label for="playlist-<%= i %>"><%= playlists[i].name %></label>
+                    </li>
+                <% } %>
+            </div>
+
+            <div id="submission">
+                <button class="button" type="reset">Cancel</button>
+                <button id="submit-selection" type="submit" class="button">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>

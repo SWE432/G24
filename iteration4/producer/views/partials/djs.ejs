@@ -1,0 +1,22 @@
+<div id="dj-section" class="hidden">
+    <h1 style="margin-top: 2rem; text-align: left;">DJ Selection</h1>
+    <div class="grid-container" id="main-content">
+        <form id="dj-form" action="#" method="post" style="padding-left: 0.25rem;">
+
+            <div class="flexbox-column">
+                <% for (let i = 0; i < djs.length; i++) { %>
+                    <li class="flexbox-item">
+                        <input type="radio" id="dj-<%= i %>" name="DJ" value="<%= djs[i].name %>">
+                        <label for="dj-<%= i %>"><%= djs[i].name %></label>
+                    </li>
+                <% } %>
+            </div>
+
+            <div id="submission">
+                <button class="button" type="reset">Cancel</button>
+                <button id="submit-selection" type="submit" class="button">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>

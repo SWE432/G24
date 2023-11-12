@@ -1,56 +1,43 @@
+<!-- Author: Nicholas Terrazas -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <%- include('../partials/head'); %>
+	<%- include('../partials/head'); %>
 </head>
-<body class="container">
-
-<main>
+<body style="text-align: center;">
+    
     <h1>Producer Station</h1>
 
-    <h2>Playlists</h2>
-    <ul>
-      <% playlists.forEach(function(playlist) { %>
-        <li>
-          <strong><%= playlist.name %></strong>
-          for all your <%= playlist.genre %> needs!
-        </li>
-      <% }); %>
-    </ul>
+    <div id="categories">
+        <a href="#" class="category-selection">
+            <button class="button" onclick="showSection('playlist-section')">Choose Playlists</button>
+        </a>
+        <a href="#" class="category-selection">
+            <button class="button" onclick="showSection('events-section')">Choose Events</button>
+        </a>
+        <a href="#" class="category-selection">
+            <button class="button" onclick="showSection('dj-section')">Choose DJ</button>
+        </a>
+        <a href="#" class="category-selection">
+            <button class="button" onclick="showSection('timeslot-section')">Choose Timeslot</button>
+        </a>
+    </div>
 
-    <h2>Events</h2>
-    <ul>
-      <% events.forEach(function(event) { %>
-        <li>
-          <strong><%= event.name %></strong>:
-          <%= event.description %>
-        </li>
-      <% }); %>
-    </ul>
+	<%- include('../partials/playlists', { playlists: playlists }); %>
+	<%- include('../partials/events', { events: events }); %>
+	<%- include('../partials/djs', { djs: djs }); %>
+	<%- include('../partials/timeslots', { timeslots: timeslots }); %>
 
-    <h2>DJs</h2>
-    <ul>
-      <% djs.forEach(function(dj) { %>
-        <li>
-          <strong><%= dj.name %></strong>
-        </li>
-      <% }); %>
-    </ul>
+    <script src="/index.js"></script>
 
-    <h2>Timeslots</h2>
-    <ul>
-      <% timeslots.forEach(function(timeslot) { %>
-        <li>
-          <strong><%= timeslot.time %></strong>
-        </li>
-      <% }); %>
-    </ul>
-
-</main>
-
-<footer>
-  <%- include('../partials/footer'); %>
-</footer>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll(".hidden");
+            sections.forEach(section => section.style.display = "none");
+            const section = document.getElementById(sectionId);
+            section.style.display = "block";
+        }
+    </script>
 
 </body>
 </html>
