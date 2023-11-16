@@ -146,6 +146,7 @@ function submitSelections() {
     }
 
     selections.author = author;
+    selections.timestamp = Date.now();
 
     // send selections to DB
     fetch('/submitSelections', {
@@ -163,12 +164,32 @@ function submitSelections() {
     })
     .then(data => {
         console.log(data);
+
+        let latestSelection = selections;
+        updateLatestSelection(latestSelection);
     })
     .catch(error => {
         console.error('Error:', error);
     });
 };
 
+
+function updateLatestSelection(latestSelection) {
+    const latestSelectionSection = document.getElementById("latest-selection-section");
+    if (latestSelection) {
+        latestSelectionSection.innerHTML = `
+            <h2>Latest Selection</h2>
+            <p>Playlist: ${latestSelection.playlist}</p>
+            <p>Events: ${latestSelection.events.join(', ')}</p>
+            <p>DJ: ${latestSelection.dj}</p>
+            <p>Timeslot: ${latestSelection.timeslot}</p>
+            <p>Author: ${latestSelection.author}</p>
+            <p>Timestamp: ${latestSelection.timestamp}</p>
+        `;
+    } else {
+        latestSelectionSection.innerHTML = `<p>No selection made yet.</p>`;
+    }
+};
 
 
 const playlistForm = document.getElementById("playlist-form");
