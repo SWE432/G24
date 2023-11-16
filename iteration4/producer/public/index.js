@@ -1,4 +1,9 @@
 
+function getCategoryButton(category) {
+    let button = document.getElementById(`${category}-button`);
+    return button;
+}
+
 // finds selected value from group of radio-inputs
 // then displays it through an alert
 function alertValue(category) {
@@ -63,6 +68,13 @@ function submitPlaylist(event) {
     console.log(selections);
     event.preventDefault();
 
+    let categoryButton = getCategoryButton('playlist');
+    if (selections.playlist !== "") {
+        categoryButton.style.background = 'yellow';
+    } else {
+        categoryButton.style.background = '';
+    }
+
     if (validSelections(selections)) {
         submitSelections();                
     }
@@ -74,6 +86,13 @@ function submitEvents(event) {
     selections.events = events;
     console.log(selections);
     event.preventDefault();
+
+    let categoryButton = getCategoryButton('events');
+    if (selections.events.length !== 0) {
+        categoryButton.style.background = 'yellow';
+    } else {
+        categoryButton.style.background = '';
+    }
 
     if (validSelections(selections)) {
         submitSelections();                
@@ -87,6 +106,13 @@ function submitDJ(event) {
     console.log(selections);
     event.preventDefault();
 
+    let categoryButton = getCategoryButton('dj');
+    if (selections.dj !== "") {
+        categoryButton.style.background = 'yellow';
+    } else {
+        categoryButton.style.background = '';
+    }
+
     if (validSelections(selections)) {
         submitSelections();                
     }
@@ -99,6 +125,13 @@ function submitTimeslot(event) {
     selections.timeslot = timeslot;
     console.log(selections);
     event.preventDefault();
+
+    let categoryButton = getCategoryButton('timeslot');
+    if (selections.timeslot !== "") {
+        categoryButton.style.background = 'yellow';
+    } else {
+        categoryButton.style.background = '';
+    }
 
     if (validSelections(selections)) {
         submitSelections();                
