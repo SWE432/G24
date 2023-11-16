@@ -1,5 +1,4 @@
 
-
 // finds selected value from group of radio-inputs
 // then displays it through an alert
 function alertValue(category) {
@@ -108,8 +107,33 @@ function submitTimeslot(event) {
 
 
 function submitSelections() {
-    alert(`All choices made! Submitting selections`);
+    let author = prompt(`Selections finished, enter ID:`);
+    while (!author) {
+        author = prompt('Enter ID:');
+    }
+
+    selections.author = author;
+
     // send selections to DB
+    fetch('/submitSelections', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(selections),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.text();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 };
 
 
