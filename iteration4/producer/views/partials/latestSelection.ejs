@@ -1,0 +1,14 @@
+<!-- _latestSelection.ejs -->
+<div id="latest-selection-section">
+    <h2>Latest Selection</h2>
+    <% if (selection) { %>
+        <p>Playlist: <%= selection.playlist %></p>
+        <p>Events: <%= selection.events.join(', ') %></p>
+        <p>DJ: <%= selection.dj %></p>
+        <p>Timeslot: <%= selection.timeslot %></p>
+        <p>Author: <%= selection.author %></p>
+        <p>Timestamp: <%= selection.timestamp %></p>
+    <% } else { %>
+        <p>No selection made yet.</p>
+    <% } %>
+</div>

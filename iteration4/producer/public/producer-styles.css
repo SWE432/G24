@@ -19,6 +19,13 @@ input{
     border-radius: 0.5rem;
 }
 
+p {
+    color: gold;
+}
+
+h2 {
+    color: gold;
+}
 
 #main-content {
     background-color: #3b1d57;

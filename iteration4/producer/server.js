@@ -1,5 +1,5 @@
 const express = require('express');
-const { main, insertSelections } = require('./db');
+const { main, insertSelections, getLatestSelection } = require('./db');
 const bodyParser = require('body-parser');
 const cors = require('cors')
 const app = express();
@@ -18,13 +18,14 @@ let playlists;
 let events;
 let djs;
 let timeslots;
-
+let latestSelection;
 
 // index page
 app.get('/', async function(req, res) {  
   console.log('serving producer page');
 
   const data = await main()
+  latestSelection = await getLatestSelection();
 
   playlists = data.playlists;
   events = data.events;
@@ -36,6 +37,7 @@ app.get('/', async function(req, res) {
     events: events,
     djs: djs,
     timeslots: timeslots,
+    latestSelection: latestSelection
   });
 
 });

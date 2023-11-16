@@ -71,4 +71,13 @@ async function insertSelections(selections) {
   await newSelection.save();
 };
 
-module.exports = { main, insertSelections };
+async function getLatestSelection() {
+  try {
+    const latestSelection = await Selection.findOne({}, {}, { sort: { 'timestamp': -1 }});
+    return latestSelection;
+  } catch (error) {
+    console.error("error retrieving latest selection:", error);
+  }
+}
+
+module.exports = { main, insertSelections, getLatestSelection };
