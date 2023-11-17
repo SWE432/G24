@@ -1,5 +1,4 @@
-//Exact replica of iteration 3 but implemented with node and ejs.
-//to do: make updates and improve functionality, ie add and remove actually doing something...
+
 //set ups
 var express = require('express');
 var app = express();
@@ -18,8 +17,6 @@ mongoose.connect('mongodb://localhost:27017/dj', {
 });
 
 const db = mongoose.connection;
-
-console.log("hi");
 
 /* used to put song data onto the db now. retrieval comes solely from db however.
 var his = [
@@ -139,12 +136,11 @@ db.once('open', async () => {
 
     app.post('/addSong', async (req, res) => {
         var time = req.body.time;
-        console.log('hi');
-        console.log(time);
+
         const selectedOptions = Array.isArray(req.body.selectedOptions)
         ? req.body.selectedOptions
         : [req.body.selectedOptions];
-        console.log(selectedOptions);
+
         selectedOptions.forEach(function (value) {
             const splitVal = value.split('-');
 
@@ -188,8 +184,6 @@ db.once('open', async () => {
 
             const songName = splitVal[0].trim();
             const songArtist = splitVal[1].trim();
-            console.log(songName);
-            console.log(songArtist);
 
             const condition = {
                 name: songName,

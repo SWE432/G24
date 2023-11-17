@@ -1,4 +1,4 @@
-//song schema - only one needed for djs
+//timeslot schema
 const mongoose = require('mongoose');
 
 const timeslotsSchema = new mongoose.Schema({

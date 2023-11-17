@@ -37,28 +37,9 @@ function validateForm (id){
         //console.log(songs);
         if (id==='songForm') {
             alert('Removing: ' + songs);
-            checked.forEach(function(song) {
-                remove(song);
-            });
         }
         else if (id==='songForm2')
         alert('Adding: ' + songs);
     }
     
-}
-
-//remove
-function remove(value) {
-    const splitVal = value.split('-');
-
-    const songName = splitVal[0].trim();
-    const songArtist = splitVal[1].trim();
-}
-
-//add
-function add(value) {
-    alert('HEHEHEHEH');
-    if (value != null && value != '') {
-        
-    }
 }
