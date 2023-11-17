@@ -10,35 +10,37 @@
                         <h2>Current Playlist</h2>
                         <div class="content">
                             <!-- On form submission do updates to db and relay updates to the list and stuff... -->
-                          <form id="songForm">
+                          <form id="songForm" action="/removeSong" method="post">
                               <ol id="current">
-                                <% currentlist.forEach(function(song) { %>
-                                    <li class="intext">
+                                <% songs.forEach(function(song) { %>
+                                    <li id="<%=song.id%>" class="intext">
                                         <% var val = song.name + " - " + song.artist%>
-                                        <input type="checkbox" value="<%=val%>">
+                                        <input type="checkbox" value="<%=val%>" name="selectedOptions">
                                         <strong><%- song.name + " - " + song.artist %></strong>
                                     </li>
                                   <% }); %>
                               </ol>
                               <!-- Take action when checkboxes are ticked and button is clicked -->
                               <%- include('../partials/removebutton');%>
+                              <input type="hidden" name="time" value="<%=time %>">
                           </form>
                       </div>
                     </div>
                     <div class="scrollable-box">
                         <h2>Playing History</h2>
                         <div class="content">
-                          <form id="songForm2">
+                          <form id="songForm2" action="/addSong" method="post">
                               <ol id = "history">
                                 <% history.forEach(function(song) { %>
-                                    <li class="intext">
-                                        <% var val = song.name + " - " + song.artist%>
-                                      <input type="checkbox" value="<%=val%>">
-                                      <strong><%- song.name + " - " + song.artist %></strong>
-                                    </li>
-                                  <% }); %>
+                                  <li id="<%=song.id%>"class="intext">
+                                      <% var val = song.name + " - " + song.artist%>
+                                    <input type="checkbox" value="<%=val%>" name="selectedOptions">
+                                    <strong><%- song.name + " - " + song.artist %></strong>
+                                  </li>
+                                <% }); %>
                               </ol>
                               <%- include('../partials/addbutton');%>
+                              <input type="hidden" name="time" value="<%=time %>">
                           </form>
                       </div>
                     </div>
