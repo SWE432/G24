@@ -1,4 +1,4 @@
-const queryParams = new URLSearchParams(window.location.search);
+//const queryParams = new URLSearchParams(window.location.search);
 
 //validate forms and function.
 function validateForm (id){
@@ -28,6 +28,7 @@ function validateForm (id){
         alertMsg += 'add!';
 
         alert(alertMsg);
+        return false;
     }
     else {
         let songs = '\n';
@@ -40,6 +41,8 @@ function validateForm (id){
         }
         else if (id==='songForm2')
         alert('Adding: ' + songs);
+
+        return true;
     }
-    
 }
+
