@@ -16,10 +16,11 @@
       <h1>Listener Preferences</h1>
     </div>
     <div class="jumbotron">
-          <% categories.forEach((genre) => { %>
+        <%- include %>
+          <% categories.forEach((something) => { %>
               <li>
                   <input type="checkbox">
-                  <label><%= genre.name %></label>
+                  <label><%= something.name %></label>
               </li>
           <% }); %>
     </div>
