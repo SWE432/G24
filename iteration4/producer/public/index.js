@@ -177,6 +177,10 @@ function submitSelections() {
 function updateLatestSelection(latestSelection) {
     const latestSelectionSection = document.getElementById("latest-selection-section");
     if (latestSelection) {
+        const selectionDate = new Date(latestSelection.timestamp);
+        const datePart = selectionDate.toDateString();
+        const timePart = selectionDate.toLocaleTimeString();
+
         latestSelectionSection.innerHTML = `
             <h2>Latest Selection</h2>
             <p>Playlist: ${latestSelection.playlist}</p>
@@ -184,12 +188,13 @@ function updateLatestSelection(latestSelection) {
             <p>DJ: ${latestSelection.dj}</p>
             <p>Timeslot: ${latestSelection.timeslot}</p>
             <p>Author: ${latestSelection.author}</p>
-            <p>Timestamp: ${latestSelection.timestamp}</p>
+            <p>Timestamp: ${datePart} ${timePart}</p>
         `;
     } else {
         latestSelectionSection.innerHTML = `<p>No selection made yet.</p>`;
     }
-};
+}
+
 
 
 const playlistForm = document.getElementById("playlist-form");

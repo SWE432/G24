@@ -66,6 +66,7 @@ async function insertSelections(selections) {
     dj: selections.dj,
     timeslot: selections.timeslot,
     author: selections.author,
+    timestamp: selections.timestamp
   })
 
   await newSelection.save();
