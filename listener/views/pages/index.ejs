@@ -15,14 +15,13 @@
     <p>Welcome to templating using EJS</p>
 
     <h2>Variable</h2>
-    <p><%= tagline %></p>
 
     <ul>
       <% playlist.forEach((song) => { %>
         <li>
-          <strong><%= song.name %></strong>
+          <strong><%= song.title %></strong>
           by <%= song.artist %>,
-          born <%= song.birthYear %>
+          duration <%= song.duration %>
         </li>
       <% }); %>
     </ul>
