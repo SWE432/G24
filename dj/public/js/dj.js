@@ -1,3 +1,4 @@
+//const queryParams = new URLSearchParams(window.location.search);
 
 //validate forms and function.
 function validateForm (id){
@@ -27,36 +28,21 @@ function validateForm (id){
         alertMsg += 'add!';
 
         alert(alertMsg);
+        return false;
     }
     else {
         let songs = '\n';
         checked.forEach(function(song) {
             songs += song + '\n';
-            if (id==='songForm') {
-                remove(song);
-            }
         })
         //console.log(songs);
-        if (id==='songForm')
-        alert('Removing: ' + songs);
+        if (id==='songForm') {
+            alert('Removing: ' + songs);
+        }
         else if (id==='songForm2')
         alert('Adding: ' + songs);
-    }
-    
-}
 
-//remove
-function remove(value) {
-    console.log(value);
-    if (value != null && value != '') {
-        //make updates to html here... and db in the future
+        return true;
     }
 }
 
-//add
-function add(value) {
-    console.log(value);
-    if (value != null && value != '') {
-        //make updates...
-    }
-}
