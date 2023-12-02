@@ -1,0 +1,9 @@
+    <div class="flexbox-item">
+        <form action="#" method="post" style="padding-left: 0.25rem;">
+          <% categories.forEach((something) => { %>
+              <li>
+                  <input type="checkbox">
+                  <label for="genre"><%= something.name %></label>
+              </li>
+          <% }); %>
+  </div>

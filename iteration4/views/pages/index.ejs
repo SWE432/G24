@@ -5,32 +5,39 @@
 </head>
 <body class="container">
 
-<header>
-  <%- include('../partials/header'); %>
-</header>
+    <header>
+    <%- include('../partials/header'); %>
+    </header>
 
-<main>
-  <div class="jumbotron">
-    <h1>This is great</h1>
-    <p>Welcome to templating using EJS</p>
 
-    <h2>Variable</h2>
 
-    <ul>
-      <% playlist.forEach((song) => { %>
-        <li>
-          <strong><%= song.title %></strong>
-          by <%= song.artist %>,
-          duration <%= song.duration %>
-        </li>
-      <% }); %>
-    </ul>
-  </div>
-</main>
+    <main>
+    <div class="jumbotron">
+        <div class="grid-container now-playing-grid">
+            <h1 class="now-play-grid-item1">Now Playing</h1>
+            <audio class="now-play-grid-item2" controls loop preload="none" src="free-sound.mp3"></audio>
+        </div>
+        <h2>Variable</h2>
+        <div class="flexbox-container">
+            <%- include('../partials/listener-preferences', {categories: categories});%>
+                <div class="flexbox-item">
+                    <ul>
+                        <% playlist.forEach((song) => { %>
+                            <li>
+                            <strong><%= song.title %></strong>
+                            by <%= song.artist %>,
+                            duration <%= song.duration %>
+                            </li>
+                        <% }); %>
+                    </ul>
+                </div>          
+        </div>
+    </div>
+    </main>
 
-<footer>
-  <%- include('../partials/footer'); %>
-</footer>
+    <footer>
+    <%- include('../partials/footer'); %>
+    </footer>
 
 </body>
 </html>

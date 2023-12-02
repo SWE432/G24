@@ -7,12 +7,17 @@ body {
 }
 
 h1 { color:gold; }
+h2 { color:gold; }
+
+li {
+    color: #7cdfad;
+}
 
 input[type="checkbox"] {
     width: 2rem;
     height: 2rem;
 }
-label[for*="placeholder"]{ 
+label[for*="genre"]{ 
     color: #7cdfad; 
     font-size: 2rem;
 }
@@ -54,6 +59,7 @@ label[for*="placeholder"]{
     flex-direction: row;
     margin-top: 2rem;
     justify-content: center;
+    background-color: #3b1d57;
 }
 
 .flexbox-item{
@@ -77,3 +83,11 @@ label[for*="placeholder"]{
 }
 
 
+.scrollable-box {
+    background-color: #3b1d57;
+    flex: 0 0 48%; /* Adjust width as needed */
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 300px; /* Set a maximum height for scrollability */
+    overflow-y: auto; /* Enable vertical scrolling */
+}

@@ -1,0 +1,81 @@
+body {
+    min-height: 90vh;
+    background-color: #282a3a;
+    font-family: sans-serif;
+    margin: 1rem;
+}
+
+h1 { 
+    color:gold; 
+}
+
+button{
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+input{
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+
+#main-content {
+    background-color: #3b1d57;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    display: grid;
+    border-radius: 1.25rem;
+    height: 25rem;
+}
+
+.grid-container{
+    display: grid;
+    gap: 0.1rem;
+}
+
+.flexbox-item{
+    display: inherit;
+    flex-grow: 1;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.flexbox-column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-self: center;
+}
+
+
+input[type="radio"] {
+    width: 2rem;
+    height: 2rem;
+}
+input[type="checkbox"] {
+    width: 2rem;
+    height: 2rem;
+}
+label[for*="playlist"]{ 
+    color: #7cdfad; 
+    font-size: 2rem;
+}
+
+label[for*="event"]{ 
+    color: #7cdfad; 
+    font-size: 2rem;
+}
+
+label[for*="dj"]{ 
+    color: #7cdfad; 
+    font-size: 2rem;
+}
+
+label[for*="timeslot"]{ 
+    color: #7cdfad; 
+    font-size: 2rem;
+}
