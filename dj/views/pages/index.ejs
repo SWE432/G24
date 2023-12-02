@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<title>DJ Profile</title>
+<link rel="stylesheet" type="text/css" href="/css/djstyles.css">
+  <body>
+    <%- include('../partials/nowplaying');%>
+
+      <h1 class="flexbox-item" style="text-align: center;" id="header">Select a timeslot:</h1>
+
+    <div class="flexbox-item grid-container grid-container-main-content" style="display:show">
+        <div class="flexbox-column" id="times">
+            <!-- Placeholder things for now. -->
+            <% timeslots.forEach(function(time) { %>
+              <%- include('../partials/timeslot', {id: time.time, time: time.time})%>
+            <% }); %>
+        </div>
+    </div>
+  </body>
+
+  <script src="/js/dj.js"></script>
